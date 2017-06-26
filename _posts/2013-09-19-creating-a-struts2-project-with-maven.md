@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Creating a Struts2 project with Maven"
+date: 2011-01-03 17:54
 categories: java struts2 maven
 ---
 

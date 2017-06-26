@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Accessing Context, Session, Request and Response Objects in the Struts2 Action Class"
+date: 2011-01-25 22:27
 categories: java struts2
 ---
 

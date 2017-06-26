@@ -2,7 +2,6 @@
 layout: post
 title: "Disable Struts 2 Log Messages"
 date: 2011-01-06 18:15
-comments: true
 categories: java struts2 log4j
 ---
 
@@ -25,15 +24,15 @@ To disable logging from these packages, use the following in your log4j.xml afte
 <logger name="com.opensymphony.xwork2">
     <level value="OFF" />
 </logger>
- 
+
 <logger name="freemarker.cache">
     <level value="OFF" />
 </logger>
- 
+
 <logger name="freemarker.beans">
     <level value="OFF" />
 </logger>
- 
+
 <logger name="org.apache.struts2">
     <level value="OFF" />
 </logger>
@@ -52,27 +51,27 @@ My xml looks something like this :
             <param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
         </layout>
     </appender>
- 
+
     <logger name="com.opensymphony.xwork2">
         <level value="OFF" />
     </logger>
- 
+
         <logger name="org.apache.struts2">
         <level value="OFF" />
     </logger>
- 
+
     <logger name="freemarker.cache">
         <level value="OFF" />
     </logger>
- 
+
     <logger name="freemarker.beans">
         <level value="OFF" />
     </logger>
- 
+
     <logger name="org.apache.ibatis">
         <level value="OFF" />
     </logger>
- 
+
     <root>
         <level value="DEBUG" />
         <appender-ref ref="FA" />

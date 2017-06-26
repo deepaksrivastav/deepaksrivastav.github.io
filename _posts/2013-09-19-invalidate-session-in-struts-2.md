@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Invalidate Session in Struts 2"
+date: 2011-01-25 17:32
 categories: java struts2
 ---
 

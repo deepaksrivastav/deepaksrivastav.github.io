@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SQL 'IN' Condition in MyBatis"
+date: 2011-02-11 18:38
 categories: java sql mybatis
 ---
 You will often need to build an SQL query with an ‘in’ condition. By this we mean to build the SQL query dynamically.

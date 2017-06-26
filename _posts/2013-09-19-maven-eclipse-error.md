@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Resolve Maven Eclipse Plugin execution not covered by lifecycle configuration error"
+date: 2012-07-05 19:05
 categories: eclipse maven
 ---
 

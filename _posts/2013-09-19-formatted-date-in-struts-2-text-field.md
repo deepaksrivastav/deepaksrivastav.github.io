@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Formatted Date in Struts 2 Text Field"
+date: 2011-01-06 18:12
 categories: java struts2
 ---
 

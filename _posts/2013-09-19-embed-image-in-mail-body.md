@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Embedding an Image in Mail body (HTML) using JavaMail"
-categories: java javamail 
+date: 2011-08-29 19:02
+categories: java javamail
 ---
 
 Here is the piece of code which can do exactly this:

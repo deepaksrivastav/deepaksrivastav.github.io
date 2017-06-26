@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Project] Magx Office (pdf, docx, odt viewer)"
+date: 2011-04-24 18:52
 categories: motorola magx
 ---
 
@@ -14,7 +15,7 @@ PDF Support is implemented using the Xpdf library by porting it to the Magx Plat
 Here are some screenshots and do find the .mgx file and the source for the same at the end of this post.
 
 TODO: img images/mgxOffice1.png
-TODO: img images/mgxOffice2.png 
+TODO: img images/mgxOffice2.png
 
 Mgx Package : [Download](http://dl.dropbox.com/u/12319078/magxoffice.mgx)
 

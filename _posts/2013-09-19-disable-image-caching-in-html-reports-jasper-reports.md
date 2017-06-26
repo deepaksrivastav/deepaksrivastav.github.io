@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Disable Image Caching in HTML Reports(Jasper Reports)"
+date: 2011-03-03 18:45
 categories: java jasper
 ---
 

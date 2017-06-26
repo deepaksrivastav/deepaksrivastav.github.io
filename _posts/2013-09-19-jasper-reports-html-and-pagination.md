@@ -2,7 +2,6 @@
 layout: post
 title: "Jasper Reports, HTML and Pagination"
 date: 2011-03-02 18:43
-comments: true
 categories: java jasper
 ---
 
@@ -18,4 +17,3 @@ htmlExporter.setParameter(JRHtmlExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_
 ```
 
 For more details , you can refer to [this](http://jasperforge.org/uploads/publish/jasperreportswebsite/trunk/sample.reference/nopagebreak/index.html) page.
-

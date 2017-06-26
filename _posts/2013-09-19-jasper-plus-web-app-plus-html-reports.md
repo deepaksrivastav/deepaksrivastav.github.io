@@ -2,7 +2,6 @@
 layout: post
 title: "Jasper + Web App + HTML Reports"
 date: 2011-01-20 18:24
-comments: true
 categories: java jasper
 ---
 
@@ -15,7 +14,7 @@ In the web.xml file add the following entry:
     <servlet-name>ImageServlet</servlet-name>
     <servlet-class>net.sf.jasperreports.j2ee.servlets.ImageServlet</servlet-class>
 </servlet>
- 
+
 <servlet-mapping>
     <servlet-name>ImageServlet</servlet-name>
     <url-pattern>/servlets/image</url-pattern>
@@ -26,7 +25,7 @@ The part in your code where you export the report to HTML should look like this.
 
 ```java
 JRHtmlExporter htmlExporter = new JRHtmlExporter();
- 
+
 // without the below line , images will not appear in the HTML report
 session.setAttribute(ImageServlet.DEFAULT_JASPER_PRINT_SESSION_ATTRIBUTE,
             filledReport);
