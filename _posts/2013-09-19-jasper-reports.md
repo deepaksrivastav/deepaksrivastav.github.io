@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jasper Reports, Excel and Pagination"
-date: 2011-02-07 18:36
-comments: true
 categories: java jasper
 ---
 

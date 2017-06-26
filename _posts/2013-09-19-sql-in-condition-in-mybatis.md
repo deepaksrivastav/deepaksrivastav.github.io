@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "SQL 'IN' Condition in MyBatis"
-date: 2011-02-11 18:38
-comments: true
 categories: java sql mybatis
 ---
 You will often need to build an SQL query with an ‘in’ condition. By this we mean to build the SQL query dynamically.
 
 MyBatis is very powerful when it comes to building Dynamic SQL queries ans let us see how to achieve the above with the same.
-For example, assume that our query is : 
+For example, assume that our query is :
 
 ```sql
 select * from my_data where create_date in (’2011-01-01′,’2010-01-01′);

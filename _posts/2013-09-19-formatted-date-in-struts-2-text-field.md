@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Formatted Date in Struts 2 Text Field"
-date: 2011-01-06 18:12
-comments: true
 categories: java struts2
 ---
 
@@ -12,6 +10,6 @@ You can populate the text box in your JSP after formatting the date as shown bel
 
 ```html
 <s:date name="currentDate" var="formattedDate" format="dd-MM-yyyy"/>
- 
+
 <s:textfield name="enterDate" value="%{formattedDate}"/>
 ```

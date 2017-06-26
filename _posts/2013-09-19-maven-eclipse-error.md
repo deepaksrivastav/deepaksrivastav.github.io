@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Resolve Maven Eclipse Plugin execution not covered by lifecycle configuration error"
-date: 2012-07-05 19:05
-comments: true
 categories: eclipse maven
 ---
 
@@ -56,4 +54,3 @@ Just to save some reading time, i just included the below piece of code in the p
     </pluginManagement>
 </build>
 ```
-

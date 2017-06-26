@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Creating a Struts2 project with Maven"
-date: 2011-01-03 17:54
-comments: true
 categories: java struts2 maven
 ---
 
@@ -25,7 +23,7 @@ It will take a while to create the project if you are creating it for the first 
 
 When the creation is complete, the directory would look as shown below :
 
-{% img images/mvnStrutsDirStructure.png %}
+TODO: images/mvnStrutsDirStructure.png
 
 If you have used struts 2 before you would quickly recognize that this is a struts2 blank war that we used to start off the project.
 This project does not by default mention the source and the target version of Java you are intending to use. It is always a good practice to mention the source and target. To do this , add the following to the section of the “pom.xml” file in the project directory.
@@ -46,7 +44,7 @@ If you have not followed the above step, you may later encounter an error after 
 Now , create an eclipse project using the following command.
 
 ```
-mvn eclipse:eclipse 
+mvn eclipse:eclipse
 ```
 
 This would create the eclipse project files in the same directory and you can ‘import’ this project in Eclipse.
@@ -74,4 +72,3 @@ To package the project ```mvn package```
 Just make sure that you execute all the commands from project root directory
 The project war file will be present in the target directory created in the project directory after successful build of the project.
 You can find the official documentation for Struts 2 Maven Archetypes [here](http://struts.apache.org/release/2.0.x/docs/struts-maven-archetypes.html) .
-
