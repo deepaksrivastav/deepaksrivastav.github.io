@@ -1,5 +1,9 @@
 # General Jekyll Config
-highlighter: rouge
 url: https://deepaksrivastav.github.io/
 lsi: false
+excerpt_separator: ""
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
