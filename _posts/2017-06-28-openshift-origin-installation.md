@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenShift Origin Installation"
+title: "OpenShift Origin All-in-one Installation"
 date: 2017-06-28 09:36
 categories: openshift containers
 ---
