@@ -8,12 +8,14 @@ categories: openshift containers
 This is a quicker way of installing an all-in-one OpenShift Appliance on Centos 7 for development purposes. I did all this on my Fedora 25 machine with libvirt installed.
 This will not only install the latest available stable version of OpenShift Origin, but also deploy Docker registry, Router and confgure NFS on the appliance. It will also configure persistent store for docker registry.
 
-1. Start a centos vagrant box
+**Step 1 : **Start a centos vagrant box
+
 ```bash
 $ vagrant init centos/7
 ```
 
-2. Upgrade RAM and CPU
+**Step 2 : ** Upgrade RAM and CPU
+
 ```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -28,7 +30,8 @@ end
 
 ```
 
-3. Start the vagrant box and check the IP address of the vagrant box
+**Step 3 : ** Start the vagrant box and check the IP address of the vagrant box
+
 ```bash
 $ vagrant up
 $ vagrant ssh-config
@@ -46,24 +49,25 @@ Host default
 
 ```
 
-4. SSH into the Vagrant box
+**Step 4: ** SSH into the Vagrant box
+
 ```bash
 $ vagrant ssh
 ```
 
-5. Update the OS and install some pre-requisites.
+**Step 5: ** Update the OS and install some pre-requisites.
 ```bash
 $ sudo yum -y update
 $ sudo yum -y install -y git vim
 ```
 
-6. Add centos-release-openshift-origin repository and install atomic-openshift-utils
+**Step 6 : ** Add centos-release-openshift-origin repository and install atomic-openshift-utils
 ```bash
 $ sudo yum install -y centos-release-openshift-origin
 $ sudo yum install -y atomic-openshift-utils
 ```
 
-7. Generate SSH Keys and add it to authorized keys
+**Step 7 : ** Generate SSH Keys and add it to authorized keys
 ```bash
 $ ssh-keygen
 Generating public/private rsa key pair.
@@ -90,7 +94,7 @@ The key's randomart image is:
 $ cat .ssh/id_rsa.pub >> .ssh/authorized_keys
 ```
 
-8. Ansible inventory file at /etc/ansible/hosts
+**Step 8 : ** Ansible inventory file at /etc/ansible/hosts
 ```ini
 [OSEv3:children]
 masters
@@ -122,7 +126,7 @@ IP_OF_VAGRANT_BOX openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
 
 ```
 
-9. Check connectivity with ansible. You will see the Host authenticity prompt only for the first time.
+**Step 9 : ** Check connectivity with ansible. You will see the Host authenticity prompt only for the first time.
 ```bash
 $ ansible -i inventory all -m ping
 The authenticity of host '192.168.121.14 (192.168.121.14)' can't be established.
@@ -134,22 +138,21 @@ Are you sure you want to continue connecting (yes/no)? yes
     "ping": "pong"
 }
 
-
 ```
 
-10. Install OpenShift.
+**Step 10 : ** Install OpenShift.
 ```bash
 $ ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml
 ```
 
 This will take a while to complete and the last few lines should looks like this
-```bash
+```
 PLAY RECAP *********************************************************************
 192.168.121.14             : ok=575  changed=165  unreachable=0    failed=0   
 localhost                  : ok=15   changed=0    unreachable=0    failed=0   
 ```
 
-11. Check version of OCP installed and if router and registry were deployed
+**Step 11 : ** Check version of OCP installed and if router and registry were deployed
 ```bash
 # check version of openshift installed
 $  oc version
@@ -169,7 +172,7 @@ registry-console-1-pm95f   1/1       Running   0          3m
 router-1-ufwot             1/1       Running   0          3m
 ```
 
-12. Check if NFS shares were created and that registry uses it
+**Step 12 : ** Check if NFS shares were created and that registry uses it
 ```bash
 # Check location of NFS Shares
 $ showmount -e
@@ -184,10 +187,10 @@ NAME              CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM      
 registry-volume   5Gi        RWX           Retain          Bound     default/registry-claim             6m
 ```
 
-13. Create htpasswd file, add some users and assign roles (htpasswd -bc /etc/origin/master/htpasswd username password)
+**Step 13 : ** Create htpasswd file, add some users and assign roles (htpasswd -bc /etc/origin/master/htpasswd username password)
 ```bash
 $ sudo htpasswd -bc /etc/origin/master/htpasswd admin admin
 $ oadm policy add-cluster-role-to-user cluster-admin admin
 ```
 
-14. Login into openshift console at https://IP_OF_VAGRANT_BOX:8443
+**Step 14 : ** Login into openshift console at https://IP_OF_VAGRANT_BOX:8443
